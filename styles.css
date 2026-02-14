@@ -155,16 +155,29 @@ h1 {
   margin-left: 0;
 }
 
+/* Education Item Styling - Updated for multiple entries */
 .edu-item { 
   display: flex; 
   gap: 15px; 
   align-items: flex-start; 
+  margin-bottom: 20px; /* Space between BU and Southwest University */
 }
 
 .edu-item i { 
   margin-top: 5px; 
   color: var(--dark-gray); 
   font-size: 1.1rem;
+}
+
+.edu-item strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.edu-item p {
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  margin-bottom: 0; /* Override general p margin for education list */
 }
 
 /* Footer */
