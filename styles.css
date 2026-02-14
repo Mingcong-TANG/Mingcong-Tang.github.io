@@ -189,6 +189,11 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Add this inside your styles.css near the other hover effects */
+.fa-network-wired:hover { 
+  color: #337ab7; /* This is the signature OSF blue */
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .hero-section { 
