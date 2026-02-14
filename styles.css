@@ -21,3 +21,25 @@ h2 { margin-top: 32px; }
 .card { border: 1px solid #ddd; border-radius: 14px; padding: 16px; }
 .footer { border-top: 1px solid #eee; margin-top: 40px; opacity: 0.8; }
 a { color: inherit; }
+
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  font-size: 32px; /* Adjust size of icons */
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover effects to match brand colors */
+.social-links a:hover { transform: scale(1.1); }
+.fa-linkedin:hover { color: #0077b5; }
+.fa-orcid:hover { color: #a6ce39; }
+.fa-graduation-cap:hover { color: #4285f4; }
+.fa-file-pdf:hover { color: #db4437; }
+.fa-researchgate:hover { color: #00ccbb; }
