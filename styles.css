@@ -214,3 +214,16 @@ h1 {
   
   h1 { font-size: 2rem; }
 }
+
+/* Style for your uploaded OSF icon */
+.osf-icon-img {
+  width: 24px;              /* Standard icon size */
+  height: 24px;
+  vertical-align: middle;
+  border-radius: 50%;       /* Keeps it circular if needed */
+  transition: transform 0.2s ease;
+}
+
+.osf-link:hover .osf-icon-img {
+  transform: translateY(-3px); /* Matches the hover animation of other icons */
+}
