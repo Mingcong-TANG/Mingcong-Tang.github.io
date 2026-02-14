@@ -216,3 +216,18 @@ h1 {
 }
 
 
+/* Styling for the small email icon */
+.email-icon {
+  font-size: 0.85rem;      /* Makes the icon small */
+  color: #666;             /* Gray color to match your role text */
+  margin-right: 5px;       /* Adds space between the icon and the email */
+}
+
+.role a {
+  text-decoration: none;   /* Removes the underline from the email link */
+  color: #666;             /* Keeps the email text gray */
+}
+
+.role a:hover {
+  color: #3b82f6;          /* Turns blue when you hover over it */
+}
