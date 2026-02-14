@@ -215,28 +215,4 @@ h1 {
   h1 { font-size: 2rem; }
 }
 
-/* This part fixes the "too big" icon issue */
-.social-icons {
-  display: flex;
-  align-items: center; /* Keeps everything centered in a row */
-  justify-content: center;
-  gap: 15px;
-}
 
-.osf-icon-img {
-  width: 24px;         /* This forces the size down */
-  height: 24px;        /* Keeps it square */
-  display: block;
-  object-fit: contain; /* Ensures the logo isn't stretched */
-  transition: transform 0.2s ease;
-}
-
-/* Optional: Make it slightly gray to match others, then colorful on hover */
-.osf-icon-img {
-  filter: grayscale(100%) opacity(0.7);
-}
-
-.osf-link:hover .osf-icon-img {
-  filter: grayscale(0%) opacity(1);
-  transform: translateY(-3px);
-}
