@@ -1,92 +1,65 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mingcong Tang</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
 <body>
-  <header class="container">
-    <h1>Mingcong Tang</h1>
-    <p class="tagline">Affective Psychopathology • Stress • Emotion Regulation</p>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="top-nav">
+    <div class="container nav-flex">
+      <div class="site-title">Mingcong Tang</div>
+      <nav class="nav-links">
+        <a href="#about">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        Hi, this is Mingcong😊 
+    <div class="hero-section">
+      <aside class="sidebar">
+        <div class="profile-pic">
+          <img src="assets/your-photo.jpg" alt="Mingcong Tang">
+        </div>
+        <p class="role">Lab Manager, BU</p>
+        <div class="social-icons">
+           <a href="www.linkedin.com/in/mingcong-tang-b16b75204" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+           <a href="https://orcid.org/0000-0002-6257-9746" target="_blank"><i class="fa-brands fa-orcid"></i></a>
+           <a href="https://scholar.google.com/citations?user=XE9Zh1MAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+           <a href="assets/Tang CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+           <a href="https://researchgate.net/..." target="_blank"><i class="fa-brands fa-researchgate"></i></a>
+        </div>
+      </aside>
 
-Currently, I work with Dr. Qimin Liu as a lab manager at the Quantitative Psychopathology Lab in the Center for Anxiety & Related Disorders at Boston University. 
+      <section class="main-content">
+        <h1>Welcome!</h1>
+        <p>Hi, this is Mingcong 😊</p>
+        <p>Currently, I work with Dr. Qimin Liu as a lab manager at the <strong>Quantitative Psychopathology Lab</strong> in the Center for Anxiety & Related Disorders at Boston University.</p>
+        <p>Previously, I worked with Dr. Lily Brown at the Perelman School of Medicine, and at the TREND UP Lab. I graduated from Southwest University with a Bachelor's degree in Psychology.</p>
 
-Previously, I worked with Dr. Lily Brown  at the Center for the Treatment and Study of Anxiety, Perelman School of Medicine, University of Pennsylvania, and at the TREND UP Lab (PIs: Todd J. Farchione, Ph.D., and David H. Barlow, Ph.D., ABPP) in the Center for Anxiety & Related Disorders at Boston University. I graduated from Southwest University with a Bachelor's degree in Psychology. During my undergraduate years, I worked with Dr. Hong Chen and Dr. Jiang Qiu in the Creative & Affective Neuroscience Lab (CANB).
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul class="cards">
-        <li class="card">
-          <h3>Project Title</h3>
-          <p>1–2 sentences describing your primary research or project.</p>
-          <p><a href="https://github.com/Mingcong-TANG" target="_blank" rel="noreferrer">View on GitHub</a></p>
-        </li>
-        <li class="card">
-          <h3>Another Project</h3>
-          <p>Short description of a second project or clinical experience.</p>
-          <p><a href="#" target="_blank" rel="noreferrer">Link</a></p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="cv">
-      <h2>CV</h2>
-      <p>
-        <a href="assets/Tang CV.pdf" target="_blank" rel="noreferrer">Download my CV (PDF)</a>
-      </p>
-    </section>
-
-<section id="contact">
-  <h2>Contact & Links</h2>
-  <div class="social-links">
-    <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" title="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    
-    <a href="https://orcid.org/YOUR_ID" target="_blank" title="ORCID">
-      <i class="fa-brands fa-orcid"></i>
-    </a>
-
-    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" title="Google Scholar">
-      <i class="fa-graduation-cap"></i>
-    </a>
-
-    <a href="assets/Tang CV.pdf" target="_blank" title="Download CV">
-      <i class="fa-solid fa-file-pdf"></i>
-    </a>
-
-    <a href="https://www.researchgate.net/profile/YOUR_PROFILE" target="_blank" title="ResearchGate">
-      <i class="fa-brands fa-researchgate"></i>
-    </a>
-  </div>
-  <p style="margin-top: 20px;">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-</section>
+        <div class="info-grid">
+          <div class="info-column">
+            <h3>Interests</h3>
+            <ul>
+              <li>Affective Psychopathology</li>
+              <li>Stress</li>
+              <li>Emotion Regulation</li>
+            </ul>
+          </div>
+          <div class="info-column">
+            <h3>Education</h3>
+            <div class="edu-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>BS in Psychology</strong>
+                <p>Southwest University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="container footer">
     <p>© <span id="year"></span> Mingcong Tang</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
-</html>
