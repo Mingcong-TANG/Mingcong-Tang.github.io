@@ -1,0 +1,89 @@
+---
+permalink: /research/
+---
+{% assign r = site.data.research %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · {{ site.title }}</title>
+  <meta name="description" content="Research by Mingcong Tang on how people learn from emotional experience and how this relates to psychopathology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Noto+Serif+SC:wght@400;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/research.css' | relative_url }}">
+</head>
+<body class="research">
+
+  <!-- Night sky, stars and mountain ridges: drawn and moved by assets/mountains.js -->
+  <div class="night" aria-hidden="true">
+    <svg class="sky-stars" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice"></svg>
+    <svg class="constellation" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+    <div class="project-stars"></div>
+    <svg class="ridges" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice"></svg>
+  </div>
+
+  <header class="r-nav">
+    <div class="r-nav-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">Mingcong Tang</a>
+      <nav class="nav-links">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/research/' | relative_url }}" aria-current="page">Research</a>
+        <a href="{{ '/library/' | relative_url }}">Library</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="r-main">
+    <header class="r-header">
+      <p class="eyebrow">Research</p>
+      <h1>Climbing toward the stars</h1>
+      <p class="r-statement">{{ r.statement }}</p>
+      <figure class="epigraph">
+        <blockquote lang="zh">一山放出一山拦</blockquote>
+        <figcaption>Each mountain that lets you through reveals the next one. <span>Yang Wanli</span></figcaption>
+      </figure>
+    </header>
+
+    <section class="r-section" aria-labelledby="themes-h">
+      <h2 id="themes-h">Themes</h2>
+      <ul class="themes">
+        {% for t in r.themes %}
+        <li class="theme">
+          <h3>{{ t.name }}</h3>
+          <p>{{ t.text }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="r-section" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects &amp; papers</h2>
+      <ol class="projects">
+        {% for p in r.projects %}
+        <li class="project" data-star="{{ forloop.index0 }}">
+          <span class="project-star" aria-hidden="true"></span>
+          <p class="project-meta">
+            {% if p.status and p.status != "" %}<span class="status status--{{ p.status | slugify }}">{{ p.status }}</span>{% endif %}
+            {% if p.year %}<span>{{ p.year }}</span>{% endif %}
+            {% if p.theme and p.theme != "" %}<span>{{ p.theme }}</span>{% endif %}
+          </p>
+          <h3 class="project-title">{{ p.title }}</h3>
+          {% if p.authors and p.authors != "" %}<p class="project-authors">{{ p.authors }}{% if p.venue and p.venue != "" %} · <em>{{ p.venue }}</em>{% endif %}</p>{% endif %}
+          {% if p.summary and p.summary != "" %}<p class="project-summary">{{ p.summary }}</p>{% endif %}
+          {% if p.link and p.link != "" %}<a class="project-link" href="{{ p.link }}" target="_blank" rel="noopener">{{ p.link_label | default: "Read more" }} →</a>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <footer class="r-footer">
+      <p class="summit-note">Still climbing.</p>
+      <p>© {{ site.time | date: '%Y' }} Mingcong Tang</p>
+    </footer>
+  </main>
+
+  <script src="{{ '/assets/mountains.js' | relative_url }}" defer></script>
+</body>
+</html>

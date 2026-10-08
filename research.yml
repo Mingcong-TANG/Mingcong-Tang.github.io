@@ -1,0 +1,35 @@
+# Everything on the Research page comes from this file.
+# Edit the text below, commit, and the page updates in a minute or two.
+
+statement: >-
+  I study how people learn from emotional experience (learning the value of outcomes,
+  inferring their own affective states, and using both to regulate emotion) and how
+  individual differences in these learning processes, shaped by life experience and
+  changed by treatment, give rise to the heterogeneity of psychopathology.
+
+# Research themes: change the names and one-line descriptions freely.
+themes:
+  - name: Experience
+    text: How life experience shapes the way people learn from emotion.
+  - name: Intervention
+    text: How treatment changes these learning processes.
+  - name: Measurement
+    text: Tasks and questionnaires that capture reward and affective learning.
+  - name: Multimodality
+    text: Bringing together behavioral, self-report, and other kinds of data.
+  - name: Time
+    text: How people remember their symptoms and feelings over time.
+
+# Projects and papers. Each one becomes a card, and a star in the sky.
+# Copy a block (from "- title" down) to add another. Leave a field empty ("") to hide it.
+#   status: Published / Under review / In revision / In progress
+projects:
+  - title: "Sample project title (replace me)"
+    status: "In progress"
+    year: 2026
+    authors: "Tang, M., & Coauthor, A."
+    venue: ""
+    theme: "Measurement"
+    summary: "One or two sentences on the question this project asks and why it matters."
+    link: ""          # e.g. https://doi.org/... or a preprint link
+    link_label: ""    # e.g. Paper, Preprint, Poster
