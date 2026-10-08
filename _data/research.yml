@@ -12,13 +12,13 @@ themes:
   - name: Experience
     text: How life experience shapes the way people learn from emotion.
   #- name: Intervention
-    text: How treatment changes these learning processes.
+  #  text: How treatment changes these learning processes.
   #- name: Measurement
-    text: Tasks and questionnaires that capture reward and affective learning.
+  #  text: Tasks and questionnaires that capture reward and affective learning.
   #- name: Multimodality
-    text: Bringing together behavioral, self-report, and other kinds of data.
+   # text: Bringing together behavioral, self-report, and other kinds of data.
   #- name: Time
-    text: How people remember their symptoms and feelings over time.
+  #  text: How people remember their symptoms and feelings over time.
 
 # Projects and papers. Each one becomes a card, and a star in the sky.
 # Copy a block (from "- title" down) to add another. Leave a field empty ("") to hide it.
