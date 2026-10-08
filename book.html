@@ -1,0 +1,31 @@
+---
+layout: library-base
+---
+<article class="post">
+  <a class="back-link" href="{{ '/library/' | relative_url }}">← Library</a>
+
+  <header class="post-header">
+    {% include book-cover.html book=page large=true %}
+    <div>
+      <p class="book-meta">{{ page.author }}{% if page.year %} · {{ page.year }}{% endif %}</p>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="book-foot">
+        <time datetime="{{ page.date | date_to_xmlschema }}">Written {{ page.date | date: "%B %-d, %Y" }}</time>
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </p>
+    </div>
+  </header>
+
+  {% if page.takeaway %}<p class="post-takeaway">{{ page.takeaway }}</p>{% endif %}
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {% if page.previous or page.next %}
+  <nav class="post-pager" aria-label="More books">
+    {% if page.previous %}<a class="pager-prev" href="{{ page.previous.url | relative_url }}"><span>Older</span>{{ page.previous.title }}</a>{% endif %}
+    {% if page.next %}<a class="pager-next" href="{{ page.next.url | relative_url }}"><span>Newer</span>{{ page.next.title }}</a>{% endif %}
+  </nav>
+  {% endif %}
+</article>

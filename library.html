@@ -1,0 +1,33 @@
+---
+layout: library-base
+title: Library
+permalink: /library/
+---
+<header class="lib-header">
+  <p class="eyebrow">Library</p>
+  <h1>What I've been reading</h1>
+  <p class="lede">Books I've read, and the thoughts they left behind.</p>
+</header>
+
+{% assign books = site.posts %}
+{% if books.size > 0 %}
+<p class="lib-count">{{ books.size }} {% if books.size == 1 %}book{% else %}books{% endif %} · newest first</p>
+<ol class="book-list">
+  {% for book in books %}
+  <li class="book-card">
+    {% include book-cover.html book=book %}
+    <div class="book-info">
+      <p class="book-meta">{{ book.author }}{% if book.year %} · {{ book.year }}{% endif %}</p>
+      <h2 class="book-title"><a href="{{ book.url | relative_url }}">{{ book.title }}</a></h2>
+      <p class="book-takeaway">{% if book.takeaway %}{{ book.takeaway }}{% else %}{{ book.excerpt | strip_html | truncatewords: 40 }}{% endif %}</p>
+      <p class="book-foot">
+        <time datetime="{{ book.date | date_to_xmlschema }}">{{ book.date | date: "%B %Y" }}</time>
+        {% for tag in book.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="lib-empty">The first notes are on their way.</p>
+{% endif %}

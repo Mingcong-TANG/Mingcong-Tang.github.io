@@ -1,0 +1,18 @@
+# GitHub Pages builds this site with Jekyll.
+title: Mingcong Tang
+url: "https://mingcong-tang.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Library: each book is one Markdown file in _posts/.
+# A file named 2026-10-07-short-title.md is published at /library/short-title/
+permalink: /library/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: book

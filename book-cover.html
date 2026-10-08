@@ -1,0 +1,15 @@
+{% comment %}
+  A book cover: uses the post's `cover` image if there is one,
+  otherwise draws a simple cloth-bound cover in a nature color.
+{% endcomment %}
+{% assign palette = "#4f6d4a,#7a5a3c,#3e5f66,#8a6a45,#5a6a3a,#6b4f5a" | split: "," %}
+{% assign ci = include.book.title.size | modulo: palette.size %}
+{% assign cover_color = include.book.cover_color | default: palette[ci] %}
+<div class="book-cover{% if include.large %} book-cover--lg{% endif %}" style="--cover: {{ cover_color }}">
+  {% if include.book.cover %}
+  <img src="{{ include.book.cover | relative_url }}" alt="{% if include.large %}Cover of {{ include.book.title | escape }}{% endif %}" loading="lazy">
+  {% else %}
+  <span class="cover-title">{{ include.book.title }}</span>
+  <span class="cover-author">{{ include.book.author }}</span>
+  {% endif %}
+</div>
