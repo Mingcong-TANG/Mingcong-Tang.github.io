@@ -7,11 +7,11 @@
 # 3. Fill in the fields below, write your notes, then commit and push.
 #    The book appears on the Library page automatically (newest first).
 
-title: "Book Title"
-author: "Author Name"
-year: 2024                    # year the book came out (optional)
-tags: [emotion, learning]     # optional, any words you like
-takeaway: "One sentence on what this book left you with."   # optional
+title: "Optimizing CBT for PTSD"
+author: "Lily A. Brown"
+year: 2026                    # year the book came out (optional)
+tags: CBT, PTSD     # optional, any words you like
+takeaway:   # optional
 
 # Optional cover image: save a tall (2:3) image in assets/covers/ and remove the # below.
 # cover: /assets/covers/thinking-fast-and-slow.jpg
