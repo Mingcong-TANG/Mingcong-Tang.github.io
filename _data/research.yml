@@ -24,12 +24,12 @@ themes:
 # Copy a block (from "- title" down) to add another. Leave a field empty ("") to hide it.
 #   status: Published / Under review / In revision / In progress
 projects:
-  - title: "Sample project title (replace me)"
+  - title: "Coming Soon"
     status: "In progress"
     year: 2026
-    authors: "Tang, M., & Coauthor, A."
+    #authors: "Tang, M., & Coauthor, A."
     venue: ""
-    theme: "Measurement"
-    summary: "One or two sentences on the question this project asks and why it matters."
+    #theme: "Measurement"
+    #summary: "One or two sentences on the question this project asks and why it matters."
     link: ""          # e.g. https://doi.org/... or a preprint link
     link_label: ""    # e.g. Paper, Preprint, Poster
